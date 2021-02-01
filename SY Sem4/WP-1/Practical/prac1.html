@@ -1,42 +1,88 @@
+<!-- 
+    Done All
+ -->
 <html>
 <head>
     <title>Practical 1</title>
+    <style>
+        .border-div{
+            border: 2px dashed white;
+            display: inline-block;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.205);
+        }
+        #sky{
+            color: rgb(0, 102, 255);
+            font-size: 18px;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body text="white" bgcolor="black">
-    <h1>Practical 1</h1>
+    <h1>Car Gallery</h1>
     <p>Learning basics of HTML</p>
     <font color="red" size=>Font tag with red text</font>
     <br>
-    <center>Text in center</center>
+    <center><span> Text in center </span></center>
     <hr>
     <a href="http://www.google.com">Google</a>
     <br>
-    <img src="https://images.unsplash.com/photo-1597404294360-feeeda04612e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8Y2FyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-    <br>
-    <ul>
-        <li>Mustang GTR</li>
-        <li>Audi R8</li>
-        <li>Henessey Venom gt</li>
-    </ul>
-    <br>
-    <table>
-        <tr>
-            <th>Model</th>
-            <th>Brand</th>
-            <th>Year</th>
-        </tr>
-        <tr>
-            <td>S</td>
-            <td>Tesla</td>
-            <td>2017</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Tesla</td>
-            <td>2018</td>
-        </tr>
-    </table>
+    <div>
+        <img src="https://images.unsplash.com/photo-1597404294360-feeeda04612e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8Y2FyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Mustang GTR" height="400" width="600" style="float: left;">
+    </div>
+    <div class="border-div">
+        <ul>
+            <li>
+                Mustang GTR
+                <ol>
+                    <li>Firebird</li>
+                    <li>Dwarf white</li>
+                </ol>
+            </li>
+            <li>
+                Audi R8
+                <dl>
+                    <dt>Engine</dt>
+                    <dd>Supermax v8 4.0</dd>
+                </dl>
+            </li>
+            <li id="sky">Henessey Venom gt</li>
+        </ul>
+    </div>
+    <div class="border-div">
+
+        <table style="border: 1px solid white;border-collapse:collapse;text-align: center;">
+        <caption>Cars and relations</caption>
+            <tr>
+                <th style="padding: 5px;">Model</th>
+                <th style="padding: 5px;">Brand</th>
+                <th style="padding: 5px;">Year</th>
+            </tr>
+            <tr>
+                <td style="padding: 5px;">S</td>
+                <td style="padding: 5px;">Tesla</td>
+                <td style="padding: 5px;">2017</td>
+            </tr>
+            <tr>
+                <td style="padding: 5px;">3</td>
+                <td style="padding: 5px;">Tesla</td>
+                <td style="padding: 5px;">2018</td>
+            </tr>
+            <tr>
+                <td colspan="2">Audi R8</td>
+                <td rowspan="2">2018</td>
+            </tr>
+            <tr>
+                <td colspan="2" id="etron">Audi R8 Etron</td>
+            </tr>
+        </table>
+    </div>
     <input type="color" >
-        
+    <audio controls>
+        <source src="https://www.computerhope.com/jargon/m/example.mp3">
+    </audio>
+    <video controls width="250px">
+        <source src="../../../../ITACHI lively.mp4">
+    </video>
 </body>
 </html>
