@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 class ABC {
     static int a[];
+    static int innerCount = 0, outerCount = 0;
 
     public static void insertion() {
         int key, i;
@@ -12,8 +13,10 @@ class ABC {
             while (i >= 0 && a[i] > key) {
                 a[i + 1] = a[i];
                 i = i - 1;
+                innerCount++;
             }
             a[i + 1] = key;
+            outerCount++;
         }
     }
 
@@ -25,12 +28,14 @@ class ABC {
                 if (a[j] < a[min]) {
                     min = j;
                 }
+                innerCount++;
             }
             if (min != i) {
                 int temp = a[min];
                 a[min] = a[i];
                 a[i] = temp;
             }
+            outerCount++;
         }
     }
 
@@ -40,10 +45,21 @@ class ABC {
         Scanner ob = new Scanner(System.in);
         System.out.println("Enter number of elements: ");
         int n = ob.nextInt();
+        System.out.println("\n1.Best case\n2.Worst case\nEnter choice from 1-2: ");
+        int chnum = ob.nextInt();
+
         a = new int[n];
-        for (int i = 0; i < n; i++) {
-            System.out.print("Enter element no." + (i + 1) + ": ");
-            a[i] = ob.nextInt();
+
+        if (chnum == 1) {
+            for (int i = 0; i < n; i++) {
+                a[i] = i + 1;
+            }
+        } else {
+            int j = n;
+            for (int i = 0; i < n; i++) {
+                a[i] = j;
+                j--;
+            }
         }
         System.out.print("\n1.Insertion\n2.Selection\nEnter the coice from 1-2: ");
         int ch = ob.nextInt();
@@ -64,5 +80,7 @@ class ABC {
         for (int i = 0; i < n; i++) {
             System.out.print(a[i] + " ");
         }
+        System.out.println("\nInner loop: " + innerCount);
+        System.out.println("Outer loop: " + outerCount);
     }
 }
