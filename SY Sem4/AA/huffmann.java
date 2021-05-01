@@ -35,8 +35,6 @@ class Huffman {
 
     public static void main(String[] args) {
 
-        // HashMap<Character, Integer> charCountMap = new HashMap<Character, Integer>();
-
         Scanner s = new Scanner(System.in);
 
         System.out.println("Enter number of characters : ");
@@ -54,10 +52,6 @@ class Huffman {
             charArray[i] = s.next().charAt(0);
             System.out.print("Enter frequency : ");
             charfreq[i] = s.nextInt();
-
-            // char ch = s.next().charAt(0);
-            // int freq = s.nextInt();
-            // charCountMap.put(ch, freq);
 
             NodeHuffmann node = new NodeHuffmann();
             node.c = charArray[i];
