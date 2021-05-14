@@ -1,0 +1,5 @@
+Topics to be referred	Link
+Dealing with NAN values, using replace function, deal with duplicate records, Impute missing values	https://www.analyticsvidhya.com/blog/2020/08/exploratory-data-analysiseda-from-scratch-in-python/
+Understand univariate and multivariate outliers	https://towardsdatascience.com/exploratory-data-analysis-eda-python-87178e35b14
+using groupby and apply functions	https://becominghuman.ai/titanic-survival-dataset-part-1-2-exploratory-data-analysis-5b98f7917913
+concat(), merge() and append()	https://www.geeksforgeeks.org/python-pandas-merging-joining-and-concatenating/
